@@ -4,6 +4,6 @@ export const NavigationWrapper = chakra('nav', {
 	baseStyle: {
 		py: 6,
 		mx: 'auto',
-		maxWidth: '800px',
+		maxW: 'lg',
 	},
 });
