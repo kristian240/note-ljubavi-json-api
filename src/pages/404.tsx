@@ -1,17 +1,25 @@
 import React, { FC } from 'react';
-import { Container, Heading, Image, Center } from '@chakra-ui/react';
+import { Button, Container, Heading, Center } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { ArrowBackIcon } from '@chakra-ui/icons';
 
 const NotFound: FC = () => {
 	return (
-		<Container height="100%">
-			<Center height="100%" flexDirection="column">
-				<Heading my={8} size="4xl" variant="tertiary">
+		<Container h="full">
+			<Center h="full" flexDirection="column">
+				<Heading size="4xl" variant="tertiary">
 					404
 				</Heading>
-				<Heading size="xl" variant="tertiary">
-					Error occurred!
+
+				<Heading as="h1" size="xl" variant="tertiary" mt={8}>
+					Stranica ne postoji!
 				</Heading>
-				<Image src="/images/contruction.png" alt="presentation" width="100%" />
+
+				<NextLink href="/" passHref>
+					<Button as="a" mt={8} leftIcon={<ArrowBackIcon />}>
+						Natrag na početnu stranicu
+					</Button>
+				</NextLink>
 			</Center>
 		</Container>
 	);
