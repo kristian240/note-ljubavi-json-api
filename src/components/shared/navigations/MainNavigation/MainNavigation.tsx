@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Box, Flex, Heading, HStack, IconButton, Link, LinkBox, LinkOverlay, useColorMode } from '@chakra-ui/react';
+import { Flex, Heading, HStack, Icon, IconButton, Link, LinkBox, LinkOverlay, useColorMode } from '@chakra-ui/react';
 import { ariaAttr } from '@chakra-ui/utils';
 import NextLink from 'next/link';
 import { useRouter } from 'next/dist/client/router';
@@ -15,7 +15,7 @@ export const MainNavigation: FC = () => {
 
 	return (
 		<NavigationWrapper>
-			<Flex justify="space-between" align="center">
+			<Flex justify="space-between" align="center" color={colorMode === 'light' ? 'primary.700' : 'white'}>
 				<LinkBox>
 					<NextLink href="/" passHref>
 						<LinkOverlay>
@@ -27,7 +27,7 @@ export const MainNavigation: FC = () => {
 				</LinkBox>
 
 				<HStack spacing={4}>
-					<NextLink href="/songs">
+					<NextLink href="/songs" passHref>
 						<Heading as={Link} size="sm" aria-current={ariaAttr(['/songs', '/songs/[id]'].includes(pathname))}>
 							Pjesme
 						</Heading>
@@ -36,7 +36,7 @@ export const MainNavigation: FC = () => {
 					<IconButton
 						aria-label="Toggle color mode"
 						onClick={toggleColorMode}
-						icon={<Box w="16px" as={colorMode === 'light' ? MoonIcon : SunIcon} />}
+						icon={<Icon boxSize="16px" as={colorMode === 'light' ? MoonIcon : SunIcon} />}
 					/>
 				</HStack>
 			</Flex>

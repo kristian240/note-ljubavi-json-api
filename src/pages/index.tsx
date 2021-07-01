@@ -1,12 +1,16 @@
 import React from 'react';
 import { NextPage } from 'next';
+import { Box } from '@chakra-ui/react';
 
 import { MainLayout } from '@/components/shared/layouts/MainLayout/MainLayout';
+import { HomeBanner } from '@/components/pages/home/HomeBanner';
 
 const Home: NextPage = () => {
 	return (
 		<MainLayout>
-			<h1>Hello world!</h1>
+			<Box as="main" flex={1}>
+				<HomeBanner h="full" />
+			</Box>
 		</MainLayout>
 	);
 };

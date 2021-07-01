@@ -11,5 +11,13 @@ export const styles = {
 			width: '100%',
 			height: '100%',
 		},
+		'#__next': {
+			display: 'flex',
+			flexDirection: 'column',
+
+			'> *': {
+				width: '100%',
+			},
+		},
 	}),
 };
