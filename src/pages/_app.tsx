@@ -15,9 +15,8 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
 	return (
 		<DatxProvider client={client}>
 			<ChakraProvider theme={theme}>
-				<DefaultSeo {...defaultSeoProps}>
-					<Component {...pageProps} />
-				</DefaultSeo>
+				<DefaultSeo {...defaultSeoProps} />
+				<Component {...pageProps} />
 			</ChakraProvider>
 		</DatxProvider>
 	);
