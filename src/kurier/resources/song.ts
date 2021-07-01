@@ -1,3 +1,4 @@
+import Author from '@/kurier/resources/author';
 import { Resource } from 'kurier';
 
 export default class Song extends Resource {
@@ -7,8 +8,12 @@ export default class Song extends Resource {
 			lyrics: String,
 			slug: String,
 			chords_url: String,
-			author_id: Number,
 		},
-		relationships: {},
+		relationships: {
+			author: {
+				type: () => Author,
+				foreignKeyName: 'author_id',
+			},
+		},
 	};
 }

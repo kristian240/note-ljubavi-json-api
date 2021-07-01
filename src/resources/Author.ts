@@ -1,15 +1,15 @@
 import { Attribute } from '@datx/core';
 import { Resource } from '@datx/jsonapi-react';
 
-export class Todo extends Resource {
-	static type = 'todo';
+export class Author extends Resource {
+	static type = 'author';
 
 	@Attribute({ isIdentifier: true })
 	public id!: string | number;
 
 	@Attribute()
-	public title!: string;
+	public name!: string;
 
 	@Attribute()
-	public body!: string;
+	public long_name: string;
 }

@@ -1,9 +1,9 @@
 import { Client } from '@datx/jsonapi-react';
 
-import { Todo } from '@/resources/Todo';
+import { Author } from '@/resources/Author';
 
 class AppCollection extends Client {
-	public static types = [Todo];
+	public static types = [Author];
 }
 
 export default new AppCollection();
