@@ -1,10 +1,10 @@
 import { Resource } from 'kurier';
 
-export default class Todo extends Resource {
+export default class Author extends Resource {
 	static schema = {
 		attributes: {
-			title: String,
-			body: String,
+			name: String,
+			long_name: String,
 		},
 		relationships: {},
 	};
