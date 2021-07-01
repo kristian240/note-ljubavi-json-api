@@ -6,8 +6,8 @@ import { FooterWrapper } from './MainFooter.elements';
 export const MainFooter: FC = () => {
 	return (
 		<FooterWrapper>
-			<Container>
-				<Text textAlign="center">© 2021</Text>
+			<Container size="lg">
+				<Text textAlign="center">Note Ljubavi © 2021</Text>
 			</Container>
 		</FooterWrapper>
 	);
