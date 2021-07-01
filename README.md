@@ -1,4 +1,6 @@
-# Next.js JSON:API starter
+# Note Ljubavi - Song Library
+
+> Template from [Next.js JSON:API starter](https://github.com/isBatak/next-js-json-api-starter)
 
 ## Technology
 
