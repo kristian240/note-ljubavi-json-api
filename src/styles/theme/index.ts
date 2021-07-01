@@ -8,10 +8,6 @@ import { Heading } from './components/heading';
 const overrides = {
 	styles,
 	colors,
-	fonts: {
-		body: 'GT Haptik',
-		heading: 'GT Haptik',
-	},
 	sizes: {
 		sm: '400px',
 		md: '560px',
