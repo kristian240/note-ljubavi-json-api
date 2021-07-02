@@ -14,10 +14,6 @@ export const styles = {
 		'#__next': {
 			display: 'flex',
 			flexDirection: 'column',
-
-			'> *': {
-				width: '100%',
-			},
 		},
 	}),
 };
