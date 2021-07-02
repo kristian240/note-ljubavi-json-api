@@ -11,8 +11,6 @@ interface IMainBottomNavigationProps extends Partial<IBottomNavigationProps> {}
 export const MainBottomNavigation: FC<IMainBottomNavigationProps> = (props) => {
 	const [index, setIndex] = useState(0);
 
-	console.log(props);
-
 	return (
 		<BottomNavigation value={index} onChange={setIndex} {...props}>
 			<BottomNavigationItem>

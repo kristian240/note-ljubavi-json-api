@@ -23,8 +23,6 @@ export const BottomNavigation = forwardRef<IBottomNavigationProps, 'nav'>(
 		const styles = useMultiStyleConfig('BottomNavigation', props);
 		const ownProps = omitThemingProps(props);
 
-		console.log(props);
-
 		const descendants = useBottomNavigationDescendants();
 
 		const ctx = React.useMemo(() => ({ value, onChange, showLabel }), [value, onChange, showLabel]);
