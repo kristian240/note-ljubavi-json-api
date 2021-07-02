@@ -8,11 +8,13 @@ import { BottomNavigationLabel } from '@/components/shared/core/BottomNavigation
 
 interface IMainBottomNavigationProps extends Partial<IBottomNavigationProps> {}
 
-export const MainBottomNavigation: FC<IMainBottomNavigationProps> = ({ ...rest }) => {
+export const MainBottomNavigation: FC<IMainBottomNavigationProps> = (props) => {
 	const [index, setIndex] = useState(0);
 
+	console.log(props);
+
 	return (
-		<BottomNavigation value={index} onChange={setIndex} {...rest}>
+		<BottomNavigation value={index} onChange={setIndex} {...props}>
 			<BottomNavigationItem>
 				<BottomNavigationIcon as={StarIcon} />
 				<BottomNavigationLabel>Početna</BottomNavigationLabel>

@@ -4,7 +4,7 @@ import { NextPage } from 'next';
 import { MainBottomNavigation } from '@/components/shared/navigations/MainBottomNavigation/MainBottomNavigation';
 
 const Home: NextPage = () => {
-	return <MainBottomNavigation />;
+	return <MainBottomNavigation variant="flat" colorScheme="blue" />;
 };
 
 export default Home;
