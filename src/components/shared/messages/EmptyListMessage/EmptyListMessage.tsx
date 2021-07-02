@@ -1,11 +1,18 @@
 import React, { FC } from 'react';
 import { Center, Heading, Image } from '@chakra-ui/react';
 
-export const EmptyListMessage: FC = () => (
+interface IEmptyListMessage {
+	message?: string;
+}
+
+export const EmptyListMessage: FC<IEmptyListMessage> = ({ message }) => (
 	<Center flexDirection="column" my={8}>
-		<Image src="/images/logo-js.png" alt="presentations" width="64px" mb={6} />
 		<Heading as="h5" size="md" variant="tertiary">
-			Ducky has nothing todo!
+			{message}
 		</Heading>
 	</Center>
 );
+
+EmptyListMessage.defaultProps = {
+	message: 'Nema podataka za prikaz!',
+};
