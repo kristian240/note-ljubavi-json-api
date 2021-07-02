@@ -10,6 +10,6 @@ export const MainLayout: FC = ({ children }) => (
 		{children}
 		<MainFooter />
 
-		<MainBottomNavigation />
+		<MainBottomNavigation variant="flat" colorScheme="blue" />
 	</>
 );

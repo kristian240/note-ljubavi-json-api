@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { Flex, Heading, HStack, Icon, IconButton, Link, LinkBox, LinkOverlay, useColorMode } from '@chakra-ui/react';
-import { HamburgerIcon, SearchIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import { useRouter } from 'next/dist/client/router';
 

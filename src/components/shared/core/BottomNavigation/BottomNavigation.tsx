@@ -13,7 +13,7 @@ import React from 'react';
 import { BottomNavigationProvider, IBottomNavigationContext } from './useBottomNavigationContext';
 import { BottomNavigationDescendantsProvider, useBottomNavigationDescendants } from './useBottomNavigationDescendants';
 
-interface IBottomNavigationProps
+export interface IBottomNavigationProps
 	extends Omit<HTMLChakraProps<'nav'>, 'onChange'>,
 		ThemingProps<'BottomNavigation'>,
 		IBottomNavigationContext {}
