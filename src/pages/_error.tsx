@@ -1,8 +1,12 @@
 import React from 'react';
-import { NextComponentType } from 'next';
+import { NextComponentType, NextPageContext } from 'next';
 import { Container, Heading, Image, Center } from '@chakra-ui/react';
 
-const Error: NextComponentType = ({ statusCode }: any) => {
+interface IErrorPageProps {
+	statusCode?: number;
+}
+
+const Error: NextComponentType<NextPageContext, {}, IErrorPageProps> = ({ statusCode }) => {
 	return (
 		<Container height="100%">
 			<Center height="100%" flexDirection="column">
