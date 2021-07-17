@@ -1,9 +1,11 @@
 import { config, CachingStrategy, IRawResponse, ICollectionFetchOpts } from '@datx/jsonapi';
 import { apify, deapify } from '@datx/jsonapi-react';
 
-config.cache = CachingStrategy.NetworkOnly;
+import fetch from 'isomorphic-fetch';
 
-console.log(process.env.NEXT_PUBLIC_SITE_URL);
+config.fetchReference = fetch;
+
+config.cache = CachingStrategy.NetworkOnly;
 
 config.baseUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/kurier/`;
 
