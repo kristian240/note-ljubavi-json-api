@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Box, Divider, Heading, IconButton } from '@chakra-ui/react';
+import { Divider, Heading, VStack } from '@chakra-ui/react';
 import { useResourceList } from '@datx/jsonapi-react';
 
 import { Song } from '@/resources/Song';
@@ -21,16 +21,12 @@ export const SongListSection: FC = () => {
 	}
 
 	return (
-		<Box as="section">
-			<Heading as="h1" my={10}>
-				Popis pjesama
-			</Heading>
-
-			<Divider mb={10} />
+		<VStack as="section" divider={<Divider />} spacing={4} align="flex-start">
+			<Heading as="h1">Popis pjesama</Heading>
 
 			{data.length > 0 ? (
 				<>
-					<SongList songList={data} />
+					<SongList songList={data} flex="1" />
 
 					{(hasNext || hasPrev) && (
 						<BasicPagination hasNext={hasNext} hasPrev={hasPrev} onNext={next} onPrev={prev} current={1} total={10} />
@@ -39,6 +35,6 @@ export const SongListSection: FC = () => {
 			) : (
 				<EmptyListMessage message="Nema pjesama!" />
 			)}
-		</Box>
+		</VStack>
 	);
 };

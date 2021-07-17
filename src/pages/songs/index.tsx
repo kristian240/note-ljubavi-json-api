@@ -8,7 +8,7 @@ import { MainLayout } from '@/components/shared/layouts/MainLayout/MainLayout';
 const Home: NextPage = () => {
 	return (
 		<MainLayout>
-			<Container as="main" flex={1}>
+			<Container as="main" flex={1} py={4} maxH="100vh">
 				<SongListSection />
 			</Container>
 		</MainLayout>

@@ -49,6 +49,6 @@ export const BottomNavigationItem = forwardRef<IBottomNavigationItemProps, 'butt
 	);
 });
 
-// if (__DEV__) {
-// 	BottomNavigationItem.displayName = 'BottomNavigationItem';
-// }
+if (__DEV__) {
+	BottomNavigationItem.displayName = 'BottomNavigationItem';
+}
