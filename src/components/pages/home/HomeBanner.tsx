@@ -4,17 +4,11 @@ import React, { FC } from 'react';
 import NextLink from 'next/link';
 
 export const HomeBanner: FC<BoxProps> = (props) => {
-	const bgColor = useColorModeValue('primary.300', 'primary.900');
-
 	return (
-		<Box bgColor={bgColor} {...props}>
-			<Container size="lg" centerContent py={24}>
-				<Heading as="h1" size="4xl" letterSpacing="2px" color="white">
+		<Box {...props}>
+			<Container size="lg" centerContent py={24} textAlign="center">
+				<Heading as="h1" size="4xl" letterSpacing="2px" color="primary.700">
 					Note Ljubavi
-				</Heading>
-
-				<Heading as="h2" size="md" mt={5} color="whiteAlpha.800">
-					Tko pjeva, dvostruko moli
 				</Heading>
 
 				<VStack spacing={4} mt={10}>
