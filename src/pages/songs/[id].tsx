@@ -9,11 +9,11 @@ import client from '@/store';
 import { SongDetailsSection } from '@/components/pages/song/SongDetailsSection/SongDetailsSection';
 import { handleGetPropsError } from '@/helpers/handleGetPropsError';
 import Error from '@/pages/_error';
+import { IBasePageProps } from '@/interfaces/IBasePageProps';
 
-interface ISongDetailProps {
+interface ISongDetailProps extends IBasePageProps {
 	songId: string | number;
 	songTitle: string;
-	errorStatusCode?: number;
 }
 
 const SongDetails: NextPage<ISongDetailProps> = ({ errorStatusCode, songId, songTitle }) => {

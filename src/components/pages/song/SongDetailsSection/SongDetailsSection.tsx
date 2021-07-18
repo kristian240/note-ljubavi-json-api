@@ -2,11 +2,12 @@ import React, { FC } from 'react';
 import NextLink from 'next/link';
 import { NextSeo } from 'next-seo';
 import { Button, Text } from '@chakra-ui/react';
+import { ArrowBackIcon } from '@chakra-ui/icons';
 
 import { Song } from '@/resources/Song';
 import { useResource } from '@/libs/@datx/jsonapi-react';
 import { SongDetails, SongDetailsSkeleton } from '@/components/shared/song/SongDetails/SongDetails';
-import { ArrowBackIcon } from '@chakra-ui/icons';
+import { ErrorMessage } from '@/components/shared/messages/ErrorMessage/ErrorMessage';
 
 interface ISongDetailsSection {
 	songId: number | string;
@@ -16,7 +17,7 @@ export const SongDetailsSection: FC<ISongDetailsSection> = ({ songId }) => {
 	const { data: song, error } = useResource(() => [Song, songId]);
 
 	if (error) {
-		throw error;
+		return <ErrorMessage message={String(error)} />;
 	}
 
 	if (!song) {
