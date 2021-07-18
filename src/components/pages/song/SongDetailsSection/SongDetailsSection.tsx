@@ -1,9 +1,12 @@
 import React, { FC } from 'react';
+import NextLink from 'next/link';
+import { NextSeo } from 'next-seo';
+import { Button, Text } from '@chakra-ui/react';
 
 import { Song } from '@/resources/Song';
 import { useResource } from '@/libs/@datx/jsonapi-react';
-import { NextSeo } from 'next-seo';
 import { SongDetails, SongDetailsSkeleton } from '@/components/shared/song/SongDetails/SongDetails';
+import { ArrowBackIcon } from '@chakra-ui/icons';
 
 interface ISongDetailsSection {
 	songId: number | string;
@@ -24,7 +27,13 @@ export const SongDetailsSection: FC<ISongDetailsSection> = ({ songId }) => {
 		<>
 			<NextSeo title={song.title} />
 
-			<SongDetails song={song} />
+			<NextLink href="/songs" scroll={false}>
+				<Button leftIcon={<ArrowBackIcon />} variant="link" colorScheme="primary">
+					<Text as="span">Natrag na popis</Text>
+				</Button>
+			</NextLink>
+
+			<SongDetails song={song} mt={4} />
 		</>
 	);
 };

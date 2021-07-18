@@ -7,7 +7,6 @@ import { MainLayout } from '@/components/shared/layouts/MainLayout/MainLayout';
 import { Song } from '@/resources/Song';
 import client from '@/store';
 import { SongDetailsSection } from '@/components/pages/song/SongDetailsSection/SongDetailsSection';
-import { IError } from '@datx/jsonapi/dist/interfaces/JsonApi';
 import { handleGetPropsError } from '@/helpers/handleGetPropsError';
 import Error from '@/pages/_error';
 
