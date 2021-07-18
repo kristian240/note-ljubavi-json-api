@@ -4,12 +4,12 @@ import { Container } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
 import { MainLayout } from '@/components/shared/layouts/MainLayout/MainLayout';
-import { Song } from '@/resources/Song';
-import client from '@/store';
 import { SongDetailsSection } from '@/components/pages/song/SongDetailsSection/SongDetailsSection';
 import { handleGetPropsError } from '@/helpers/handleGetPropsError';
-import Error from '@/pages/_error';
 import { IBasePageProps } from '@/interfaces/IBasePageProps';
+import Error from '@/pages/_error';
+import { Song } from '@/resources/Song';
+import client from '@/store';
 
 interface ISongDetailProps extends IBasePageProps {
 	songId: string | number;
