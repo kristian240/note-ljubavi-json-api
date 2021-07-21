@@ -1,4 +1,5 @@
 import { Author } from '@/resources/Author';
+import { Category } from '@/resources/Category';
 import { Attribute } from '@datx/core';
 import { Resource } from '@datx/jsonapi-react';
 
@@ -21,5 +22,8 @@ export class Song extends Resource {
 	chordsUrl: string;
 
 	@Attribute({ toOne: Author })
-	author: string;
+	author: Author;
+
+	@Attribute({ toMany: Category })
+	categories: Category;
 }

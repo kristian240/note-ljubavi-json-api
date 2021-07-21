@@ -1,4 +1,5 @@
 import Author from '@/kurier/resources/author';
+import Category from '@/kurier/resources/category';
 import { Resource } from 'kurier';
 
 export default class Song extends Resource {
@@ -12,7 +13,13 @@ export default class Song extends Resource {
 		relationships: {
 			author: {
 				type: () => Author,
+				belongsTo: true,
 				foreignKeyName: 'author_id',
+			},
+			categories: {
+				type: () => Category,
+				manyToMany: true,
+				foreignKeyName: 'category_id',
 			},
 		},
 	};

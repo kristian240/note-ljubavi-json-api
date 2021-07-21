@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import { Divider, Heading, VStack } from '@chakra-ui/react';
+import { Divider, Heading, HStack, IconButton, VStack } from '@chakra-ui/react';
 import { useResourceList } from '@datx/jsonapi-react';
+import { Search2Icon } from '@chakra-ui/icons';
 
 import { Song } from '@/resources/Song';
 import { SongList } from '@/components/shared/song/SongList/SongList';
@@ -22,7 +23,9 @@ export const SongListSection: FC = () => {
 
 	return (
 		<VStack as="section" divider={<Divider />} spacing={4} align="flex-start">
-			<Heading as="h1">Popis pjesama</Heading>
+			<HStack justify="space-between" w="full">
+				<Heading as="h1">Popis pjesama</Heading>
+			</HStack>
 
 			{data.length > 0 ? (
 				<>
