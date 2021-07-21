@@ -15,7 +15,6 @@ const app = new Application({
 	services: {
 		knex: knex(config),
 	},
-	// serializer: JsonApiSerializer,
 });
 
 app.use(ManyToManyAddon);
