@@ -1,4 +1,4 @@
-const TABLE_NAME = 'song_categories';
+const TABLE_NAME = 'songs_categories';
 
 exports.up = function (knex) {
 	return knex.schema.createTable(TABLE_NAME, function (t) {
