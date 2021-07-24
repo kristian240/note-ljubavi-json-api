@@ -1,3 +1,4 @@
+import { ManyToManyProcessor } from '@/kurier/processors/ManyToManyProcessor';
 import Author from '@/kurier/resources/author';
 import Category from '@/kurier/resources/category';
 import { Resource } from 'kurier';
@@ -23,4 +24,7 @@ export default class Song extends Resource {
 			},
 		},
 	};
+}
+export class SongManyToManyProcessor<ResourceT extends Resource> extends ManyToManyProcessor<ResourceT> {
+	static resourceClass = Song;
 }

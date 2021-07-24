@@ -6,8 +6,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import config from '../../../../knexfile.js';
 
 import Author from '@/kurier/resources/author';
-import Song from '@/kurier/resources/song';
-import Category from '@/kurier/resources/category';
+import Song, { SongManyToManyProcessor } from '@/kurier/resources/song';
+import Category, { CategoryManyToManyProcessor } from '@/kurier/resources/category';
 
 const app = new Application({
 	namespace: 'api/kurier',
@@ -15,6 +15,7 @@ const app = new Application({
 	services: {
 		knex: knex(config),
 	},
+	processors: [SongManyToManyProcessor, CategoryManyToManyProcessor],
 });
 
 app.use(ManyToManyAddon);
